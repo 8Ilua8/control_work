@@ -1,24 +1,24 @@
 #include <iostream>
-pair <int, int> Innumbers();
-int max(pair<int, int> numbers);
-void Aswer(int maxNumber);
+std::pair <int, int> get_numbers();
+int max(std::pair<int, int> numbers);
+void out_number(int number);
 
 int main()
 {
-	Aswer(max(Innumbers()));
+	out_number(max(get_numbers()));
 	return 0;
 }
-pair <int, int> Innumbers() {
+std::pair <int, int> get_numbers() {
 
-	pair<int, int> numbers;
-	std::cout << "Enter to numbers" << std::endl;
+	std::pair<int, int> numbers;
+	std::cout << "Enter to numbers - ";
 	std::cin >> numbers.first >> numbers.second;
 	return numbers;
 }
-int max(pair<int, int> numbers) {
+int max(std::pair<int, int> numbers) {
 	return numbers.first > numbers.second ? numbers.first : numbers.second;
 }
-void Aswer(int maxNumber) {
+void out_number(int number) {
 
-	std::cout << "Your max number = " << maxNumber << std::endl;
+	std::cout << "Your max number = " << number << std::endl;
 }
